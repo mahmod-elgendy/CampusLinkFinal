@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusLink | Signup</title>
+  <link href="img/favicon.png" rel="icon">
+  <style>
+    /* CSS: Signup Page Styling */
+    .signup-page {
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .signup-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .signup-form .btn-signup {
+      width: 100%;
+      padding: 12px;
+      background-color: #45e8daaa;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .signup-form .btn-signup:hover {
+      background-color: #45e8daaa;
+    }
+
+    .signup-form .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .signup-form .login-link a {
+      color: #45e8daaa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Signup Section -->
+  <section class="signup-page">
+    <div class="signup-container">
+      <h2>Create an Account</h2>
+      <form class="signup-form" id="signupForm" action="#" method="POST">
+        <input type="text" name="name" id="name" placeholder="Full Name" required />
+        <input type="email" name="email" id="email" placeholder="Email" required />
+        <input type="text" name="phone" id="phone" placeholder="Phone Number" required />
+        <input type="password" name="password" id="password" placeholder="Password" required />
+        <button type="button" class="btn-signup" onclick="validateForm()">Signup</button>
+        <div class="login-link">
+          Already a member? <a href="C:\Users\hp\Desktop\home\home\CampusLink\Login.html">Login here</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!name || !email || !phone || !password) {
+        alert("All fields are required.");
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      if (!validatePhone(phone)) {
+        alert("Please enter a valid phone number.");
+        return;
+      }
+
+      if (!validatePassword(password)) {
+        alert("Password must be at least 8 characters long and include one uppercase letter, one number, and one special character.");
+        return;
+      }
+
+      alert("Signup successful!");
+    }
+
+    function validateEmail(email) {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailPattern.test(email);
+    }
+
+    function validatePhone(phone) {
+      const phonePattern = /^[0-9]{10,15}$/;
+      return phonePattern.test(phone);
+    }
+
+    function validatePassword(password) {
+      const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+      return passwordPattern.test(password);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusLink | Login</title>
+    <link href="img/favicon.png" rel="icon">
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #3db3b3, #66dcd2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            flex-direction: column; 
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3db3b3;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #3db3b3;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3db3b3;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .extra-links a {
+            color: #3db3b3;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            form {
+                width: 90%;
+                padding: 15px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome Back!</h1> 
+    <form action="/profile/" method="GET">
+        <input type="text" name="user_id" id="user_id" placeholder="Enter User ID" required>
+        <button type="submit">Login</button><br><br>
+        
+        <form action="/register/" method="GET">
+          <div class="extra-links" style="color: #222;"> Not a member? <a href="register">Signup now</a> </div>
+        </form>
+    </form>
+</body>
+</html>

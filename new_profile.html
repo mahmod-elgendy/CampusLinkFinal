@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink | Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJQ3QhqLMpG8r+KnujsiDg9w7I6Fk/g9LOFhjp7j+9JoaXzMC4fRbBxDOkJl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+    <link href="img/favicon.png" rel="icon">
+    <script src="{% static 'blog/main.js' %}"></script>
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <style>
+        /* Add the Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background for the menu */
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* General Body Styling */
+        body {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://mediaaws.almasryalyoum.com/news/verylarge/2019/08/20/963895_0.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding-top: 80px; /* Add padding-top to avoid overlap with the navbar */
+        }
+
+        .background-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        #profile, #posts {
+            position: relative;
+            z-index: 2;
+            width: 85%;
+            margin: 20px auto;
+            background: #f6f4f4;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            padding: 25px 30px;
+            border: 1px solid #3db3b3;
+        }
+
+        #profile img {
+            display: block;
+            margin: 15px auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #3db3b3;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .post-card {
+            background-color: #f6f4f4;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #3db3b3;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        .btn {
+            font-size: 0.8rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background-color: #3db3b3;
+            border: none;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #2a9898;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .action-buttons .btn {
+            margin: 0 5px;
+        }
+
+        .text-muted {
+            font-style: italic;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            #profile, #posts {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar (Menu) -->
+    <div class="navbar">
+        <a href="hero.html">Home</a>
+        <a href="new_profile.html">Profile</a>
+        <a href="notification.html">Notifications</a>
+        <a href="mentors.html">Mentors</a>
+    </div>
+
+    <div class="background-image">
+        <div class="container profile-container">
+            <div id="profile">
+                <h1>Profile</h1>
+                <img src="img/face.jpg" class="rounded-circle img-fluid profile-photo mb-3" alt="Profile Photo">
+                <p><strong>Name:</strong> <span id="username">{{ user.UserName }}</span></p>
+                <p><strong>Email:</strong> <span id="email">{{ user.UserEmail }}</span></p>
+                <p><strong>Bio:</strong> <span id="bio">{{ user.UserBio }}</span></p>
+                <p><strong>CV:</strong> <a href="{{ user.UserCV }}" target="_blank" class="btn">View CV</a></p>
+                <p><strong>User Tags:</strong> <span id="tags">{{ user.UserTags }}</span></p>
+                <p><strong>Followers:</strong> <span id="followers">{{ user.UserNfollowers }}</span></p>
+                <p><strong>Following:</strong> <span id="following">{{ user.UserNfollowing }}</span></p>
+                <p><strong>Access:</strong> <span id="access">{{ user.UserAccess }}</span></p>
+
+                <div class="action-buttons">
+                    <a href="update_profile.html" class="btn">Update Profile</a>
+                    <button id="deleteProfileBtn" class="btn">Delete Profile</button>
+                </div>
+            </div>
+
+            <div id="posts">
+                <h1>Your Posts</h1>
+                <div class="post-card">
+                    <div class="text-center">
+                        <a href="create_post.html" class="btn">Create New Post</a>
+                        <p class="text-muted">No image available</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="edit_post.html" class="btn">Edit Post</a>
+                        <button onclick="deletePost('{{ post_id }}')" class="btn">Delete Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Campuslink | All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('deleteProfileBtn').addEventListener('click', function () {
+            const userId = '{{ user.UserID }}';
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+            if (csrfToken) {
+                fetch(`/profile/delete/${userId}/`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': csrfToken,
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message);
+                        window.location.href = '/';
+                    })
+                    .catch(error => console.error('Error deleting profile:', error));
+            } else {
+                console.error('CSRF token not found!');
+            }
+        });
+
+        function deletePost(postId) {
+            if (confirm('Are you sure you want to delete this post?')) {
+                const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+                fetch(`/post/delete/${postId}/`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': csrfToken,
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message);
+                        location.reload();
+                    })
+                    .catch(error => console.error('Error deleting post:', error));
+            }
+        }
+    </script>
+</body>
+
+</html>
+

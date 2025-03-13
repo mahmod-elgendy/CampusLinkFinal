@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CampusLink</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="main.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="img/favicon.png" alt="">
+        <h1 class="sitename">CampusLink</h1><span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          
+
+
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="login">Get Started</a>
+      
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="img(home)/hero.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to CampusLink</h2>
+            <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making website to make communication easier</p>
+          </div>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-5 content">
+            <h3>About Us</h3>
+            <h2>We are students from Zewail City of Science and Technology, driven by curiosity and innovation.</h2>
+            <p>Our mission is to create meaningful solutions that benefit our community and reflect the values of creativity, teamwork, and excellence.</p>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+        
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <i class="bi bi-buildings"></i>
+                        <h3>Campus Connection</h3>
+                        <p>Connect with students, professors, and mentors within the Zewail City community through a single platform.</p>
+                    </div>
+                </div> <!-- End Icon Box -->
+        
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box">
+                        <i class="bi bi-clipboard-pulse"></i>
+                        <h3>Content Sharing</h3>
+                        <p>Share knowledge, resources, and updates with peers easily, fostering collaboration and engagement.</p>
+                    </div>
+                </div> <!-- End Icon Box -->
+        
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-box">
+                        <i class="bi bi-command"></i>
+                        <h3>Profile Management</h3>
+                        <p>Manage your personal profile, showcase achievements, and customize your bio to reflect your academic journey.</p>
+                    </div>
+                </div> <!-- End Icon Box -->
+        
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <h3>Performance Tracking</h3>
+                        <p>Track your progress and stay updated with insights into your academic performance and activities.</p>
+                    </div>
+                </div> <!-- End Icon Box -->
+        
+            </div>
+        </div>
+        
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section dark-background">
+
+      <img src="img(home)/numbers.jpg" alt="" data-aos="fade-in">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Students</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="231" data-purecounter-duration="1" class="purecounter"></span>
+              <p>professors</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="2251" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+    <p>Explore the key features and services of CampusLink, designed to connect and empower our community.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- Service Item 1 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-people"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Campus Connectivity</a></h4>
+            <p class="description">Easily connect with students, professors, and mentors across the campus to foster collaboration and engagement.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Item -->
+
+      <!-- Service Item 2 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-share"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Content Sharing</a></h4>
+            <p class="description">Share academic resources, updates, and media with peers seamlessly, all in one place.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Item -->
+
+      <!-- Service Item 3 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-person-circle"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Personalized Profiles</a></h4>
+            <p class="description">Customize your profile to showcase achievements, skills, and personal information in an organized way.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Item -->
+
+      <!-- Service Item 4 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Performance Insights</a></h4>
+            <p class="description">Track your academic and extracurricular progress with insightful analytics and data.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Item -->
+
+    </div>
+  </div>
+
+</section>
+    <!-- Features Section -->
+<section id="features" class="features section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Features</h2>
+    <p>Discover the unique features of CampusLink that enhance connectivity, collaboration, and engagement within the campus.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <!-- Feature Item 1 -->
+    <div class="row gy-4 align-items-center features-item">
+      <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+        <h3>Streamlined Communication</h3>
+        <p>
+          CampusLink provides a unified platform for seamless communication between students, professors, and mentors. Stay updated and connected effortlessly.
+        </p>
+      </div>
+      <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+        <div class="image-stack">
+          <img src="assets/img(home)/lamp.jpg" alt="Communication Feature" class="stack-front">
+          <img src="assets/img(home)/white.jpg" alt="Collaboration Feature" class="stack-back">
+        </div>
+      </div>
+    </div><!-- End Features Item -->
+
+    <!-- Feature Item 2 -->
+    <div class="row gy-4 align-items-stretch justify-content-between features-item">
+      <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+        <img src="assets/img(home)/help.jpg" class="img-fluid" alt="Collaboration">
+      </div>
+      <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+        <h3>Enhanced Collaboration</h3>
+        <p>
+          Collaborate on projects, share ideas, and work together with peers using our advanced tools for teamwork and engagement.
+        </p>
+        <ul>
+          <li><i class="bi bi-check"></i> <span>Share academic resources and updates easily.</span></li>
+          <li><i class="bi bi-check"></i> <span>Participate in group discussions and projects.</span></li>
+          <li><i class="bi bi-check"></i> <span>Connect with mentors for guidance and support.</span></li>
+        </ul>
+      </div>
+    </div><!-- End Features Item -->
+
+  </div>
+
+</section><!-- /Features Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+     <!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us for any inquiries or assistance. We are here to help!</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6">
+
+        <div class="row gy-4">
+          <!-- Address -->
+          <div class="col-md-6">
+            <div class="info-item" data-aos="fade" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>Smart Village</p>
+              <p>El Sheikh Zayed, Giza</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <!-- Phone -->
+          <div class="col-md-6">
+            <div class="info-item" data-aos="fade" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+20 01101663089</p>
+              <p>+20 01030144586</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <!-- Email -->
+          <div class="col-md-6">
+            <div class="info-item" data-aos="fade" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>mariiamhassan21@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <!-- Open Hours -->
+          <div class="col-md-6">
+            <div class="info-item" data-aos="fade" data-aos-delay="500">
+              <i class="bi bi-clock"></i>
+              <h3>Open Hours</h3>
+              <p>Monday - Friday</p>
+              <p>9:00AM - 05:00PM</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->
+
+
+<footer id="footer" class="footer position-relative light-background">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <!-- About Section -->
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename">CampusLink</span>
+        </a>
+        <p>
+          CampusLink is a platform designed for students and faculty to connect, collaborate, and share knowledge within the Zewail City community.
+        </p>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Our Features -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">Content Sharing</a></li>
+          <li><a href="#">Profile Management</a></li>
+          <li><a href="#">Performance Insights</a></li>
+          <li><a href="#">Mentorship Opportunities</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>Smart Village</p>
+        <p>El Sheikh Zayed, Giza</p>
+        <p>Egypt</p>
+        <p class="mt-4"><strong>Phone:</strong> <span>+20 01101663089</span></p>
+        <p><strong>Email:</strong></p>
+        <p>mariiamhassan21@gmail.com</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="sitename">CampusLink</strong>. <span>All Rights Reserved</span></p>
+    <div class="credits">
+      Designed with ❤️ by <a href="#">Zewail City Students</a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/main.js"></script>
+
+</body>
+
+</html>
+

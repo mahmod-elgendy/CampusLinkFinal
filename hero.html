@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink | Home</title>
+    <link href="img/favicon.png" rel="icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJQ3QhqLMpG8r+KnujsiDg9w7I6Fk/g9LOFhjp7j+9JoaXzMC4fRbBxDOkJl" crossorigin="anonymous">
+
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        h1 {
+            margin-top: 90px;
+            font-size: 2.5em;
+            color: #2a9898;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .post-card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .post-card h5 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .post-card p {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .post-card a {
+            background-color: #2a9898;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .post-card a:hover {
+            background-color: #267a7a;
+        }
+
+        .post-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .post-card {
+                width: 90%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="hero">Home</a>
+        <a href="new_profile">Profile</a>
+        <a href="notification">Notifications</a>
+        <a href="mentors">Mentors</a>
+    </div>
+
+    <h1>All Posts</h1>
+
+    <div class="container">
+        {% for post in posts %}
+            <div class="post-card">
+                {% if post.image_url %}
+                    <img src="{{ post.image_url }}" alt="Post Image">
+                {% endif %}
+                <h5>{{ post.title }}</h5>
+                <p>{{ post.content }}</p>
+                <a href="#">View Post</a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0p5eS5niFeT1h9Dozv3n/vVVj0YWrE+8lPE3dswzVxqmrqv1" crossorigin="anonymous"></script>
+</body>
+
+</html>

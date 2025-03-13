@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusLink | Mentors</title>
+  <link href="img/favicon.png" rel="icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJQ3QhqLMpG8r+KnujsiDg9w7I6Fk/g9LOFhjp7j+9JoaXzMC4fRbBxDOkJl" crossorigin="anonymous">
+
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://mediaaws.almasryalyoum.com/news/verylarge/2019/08/20/963895_0.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background for the menu */
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+    .background-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+      z-index: 1;
+    }
+
+    .mentor-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 2; /* Ensure the container is above the overlay */
+      position: relative;
+    }
+
+    .mentor-card {
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #2a9898; /* Heading color */
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .mentor-card h2 {
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .mentor-card p {
+      color: #666;
+    }
+
+    .mentor-card button {
+      background-color: #2a9898; /* Button background color */
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    .mentor-card button:hover {
+      background-color: #2a9898;
+      transform: scale(1.05);
+    }
+
+    .mentor-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .mentor-card {
+        width: 90%;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="hero">Home</a>
+    <a href="new_profile">Profile</a>
+    <a href="notification">Notifications</a>
+    <a href="mentors">Mentors</a>
+  </div>
+  <div class="background-image"></div>
+  <div class="mentor-container">
+    
+    
+    <!-- Mentor Card -->
+    <div class="mentor-card">
+      <h3>{{ mentor.name }}</h3>
+      <p><strong>Email:</strong> {{ mentor.email }}</p>
+      <p><strong>Availability:</strong> {{ mentor.availability }}</p>
+      <p><strong>Tags:</strong> {% for tag in mentor.tags %} {{ tag }} {% endfor %}</p>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0p5eS5niFeT1h9Dozv3n/vVVj0YWrE+8lPE3dswzVxqmrqv1" crossorigin="anonymous"></script>
+</body>
+</html>
